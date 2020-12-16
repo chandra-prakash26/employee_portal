@@ -1,0 +1,176 @@
+<html>
+    <!-- Head of Html page -->
+    <head>
+        <title>Employee Portal</title>
+        <!-- Adding style sheet -->
+        <link rel="stylesheet" href="employeePortal.css" type="text/css">
+    </head>
+    
+    <!-- Body of Html page -->
+    <body>
+        <header>
+            <!-- Login and register page links -->
+            <ul>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+            <!-- Name of the page -->
+            <h1>Employee Portal</h1>
+        </header>
+
+        <main>
+            <!--Navigation bar for the page-->
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutUs">About Us</a></li>
+                    <li><a href="#contactUs">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!--Aside content of the page-->
+            <aside>
+                <h4>Job Advertisements</h4>
+            </aside>
+
+            <div class="content">
+
+                <!--Home content for the page-->
+                <section id="home">
+                    <h2>Home</h2>
+                </section>
+                
+                <!--Description about the company-->
+                <section id="aboutUs">
+                    <h2>About Us</h2>
+                </section>
+                
+                <!--Contact information of the company -->
+                <section id="contactUs">
+                    <h2>Contact Us</h2>
+                    <p>Phone No: </p>
+                    <p>Email Id: </p>
+                    <p>Address: </p>
+                </section>
+                
+                <!--Fields required for registration of an employee-->
+                <section id="register">
+                    <form action="#registerSuccess" method="post">
+                        <fieldset>
+                            <!-- Caption for registration form -->
+                            <legend>Register Details</legend>
+                            
+                            <!-- Taking input Employee Id of format MXXXXXXX-->
+                            <div>
+                                <label for="empId">Employee Id (required):</label>
+                                <input type="text" id="empId" name="empId" 
+                                   value="" required aria-required="true"
+                                   pattern="M[0-9]{7}">
+                                <span id="empId-format" class="help">Format: MXXXXXXX</span>
+                            </div>
+                            
+                            <!-- Taking input Name of format Firstname Lastname-->
+                            <div>
+                                <label for="name">Name (required):</label>
+                                <input type="text" id="name" name="name" 
+                                   value="" required aria-required="true"
+                                   pattern="[0-9a-zA-Z]+\s[0-9a-zA-Z]+">
+                                <span id="name-format" class="help">Format: Firstname Lastname</span>
+                            </div>
+            
+                            <!-- Taking input Email of format email -->
+                            <div>
+                                <label for="email">Email (required):</label>
+                                <input type="email" id="email" name="email" 
+                                   value="" required aria-required="true">
+                            </div>
+            
+                            <!-- Taking input of format +91 XXXXXXXXXX -->
+                            <div>
+                                <label for="contactNo">Contact Number (required):</label>
+                                <input type="text" id="contactNo" name="contactNo" 
+                                   value="+91" required aria-required="true"
+                                   pattern="\+91+\s[789][0-9]{9}+">
+                                <span id="contactNo-format" class="help">Format: +91 XXXXXXXXXX</span>
+                            </div>
+
+                            <!-- Taking input Address -->
+                            <div>
+                                <label for="address">Address:</label>
+                                <input type="text" id="address" name="address" value="">
+                            </div>
+
+                            <!-- Taking input Password of format Minimum eight characters, at least one 
+                                letter, one number and one special character-->
+                            <div>
+                                <label for="password">Password (required):</label>
+                                <input type="text" id="password" name="password" 
+                                   value="" required aria-required="true"
+                                   pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$">
+                                <span id="password-format" class="help">
+                                    Format: Minimum eight characters, at least one letter, one number 
+                                    and one special character
+                                </span>
+                            </div>
+            
+                            <!-- Submit Button -->
+                            <div class="submit">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+
+                <!--Display page if registraion is succeccfull-->
+                <section id="registerSuccess">
+                    <h2>Registerd Successfully</h2>
+                </section>
+
+                <!--Fields required for login page-->
+                <section id="login">
+                    <form action="#loginSuccess" method="post">
+                        <fieldset>
+                            <!-- Caption for login form -->
+                            <legend>Login Details</legend>
+
+                            <!-- Taking input Email of format email -->
+                            <div>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" 
+                                   value="" required aria-required="true">
+                            </div>
+            
+                            <!-- Taking input Password of format Minimum eight characters, at least one 
+                                letter, one number and one special character-->
+                            <div>
+                                <label for="password">Password:</label>
+                                <input type="text" id="password" name="password" 
+                                    value="" required aria-required="true"
+                                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$">
+                                    <span id="password-format" class="help">
+                                        Format: Minimum eight characters, at least one letter, one number 
+                                        and one special character
+                                    </span>
+                            </div>
+            
+                            <!-- Submit Button -->
+                            <div class="submit">
+                                <input type="submit" value="Login">
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+
+                <!--Display page if login is successful-->
+                <section id="loginSuccess">
+                    <h2>You have logged into your page.</h2>
+                </section>
+            </div>
+        </main>
+
+        <!--Footer of the page-->
+        <footer>
+            <p id="copyright">&copy;Reserved 2020</p>
+        </footer>
+    </body>
+</html>
